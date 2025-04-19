@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        header {
+
+            text-align: center;
+            padding: 1.5rem 2rem;
+            box-shadow: -10px -8px 20px 0px black;
+
+            border-bottom-right-radius: 12px;
+            border-bottom-left-radius: 12px;
+        }
+
+        header>h1 {
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+
+        main {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .content {
+            padding: 2rem 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .text {
+            padding: .8rem 1rem;
+            font-size: 1.1rem;
+            border-radius: 4px;
+            outline: none;
+            border: 1px solid black;
+            max-width: 14rem;
+            width: 100%;
+        }
+
+        .text::placeholder {
+            font-size: 1.2rem;
+        }
+
+        .sub {
+            padding: .6rem 1.2rem;
+
+        }
+
+        .start {
+            padding: .8rem 1.5rem;
+            background-color: aqua;
+            border: 1px solid rgba(64, 62, 62, 0.712);
+            border-radius: 2px;
+        }
+
+        .start:disabled {
+            cursor: not-allowed;
+        }
+
+        .sub:disabled {
+         
+            cursor: not-allowed;
+        }
+
+        p{
+            text-align: center ;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Guess The number</h1>
+    </header>
+    <main>
+
+        <div class="content">
+            <p>Enter a guess between 0 to 100. </p>
+            <form>
+                <input class="text" type="number" min="0" max="100" required placeholder="Enter a number">
+                <div class="btn">
+                    <button  class="sub" type="submit">Submit</button>
+                    <button disabled type="button" class="start" >Start Game</button>
+                </div>
+
+            </form>
+            <p class="hint" ></p>
+
+            <p class="guess"> <span class="guesses"></span> </p>
+            
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+<!-- https://sadanandpai.github.io/frontend-mini-challenges/javascript/src/challenges/guess-the-number/ -->
