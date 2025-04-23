@@ -4,7 +4,7 @@
 
 #### concepts used <br><br>
 
--- JS DOM <br> <br>
--- Form Method <br>
--- HTML and CSS <br>
---
+1. JS DOM <br> <br>
+2. Form Method <br>
+3. HTML and CSS <br>
+
